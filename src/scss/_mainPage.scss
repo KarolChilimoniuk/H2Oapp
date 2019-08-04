@@ -6,6 +6,7 @@
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
+
     .counter {
         color: #fff;
         font-size: 44px;
@@ -13,7 +14,8 @@
         top: 50%;
         transform: translateY(-50%);
     }
-    .button {
+
+    .button-add, .button-remove {
       border: 0;
       border-radius: 5px;
       cursor: pointer;
@@ -23,22 +25,27 @@
       margin-top: 30px;
       width: 216px;
     }
-    .button:hover {
+
+    .button-add {
+        box-shadow: 0 1px 5px 2px #000;
+    }
+
+    .button-add:hover {
         background-color: transparent;
         font-size: 20px;
     }
-    .button:nth-child(3) {
-        box-shadow: 0 1px 5px 2px #000;
-    }
-    .button:nth-child(4) {
+
+    .button-remove {
         background-color: transparent;
         color: #fff;
         font-size: 14px;
         height: 23px;
         width: 184px;
     }
-    .button:nth-child(4):hover {
+
+    .button-remove:hover {
         font-size: 16px;
     }
+
 }
 
