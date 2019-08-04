@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 @import "_normalize";
 @import "_variables";
 @import "_mainPage";
@@ -9,6 +10,7 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
