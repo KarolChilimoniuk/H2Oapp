@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700|Source+Code+Pro:400,700&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -308,6 +308,90 @@ template {
 [hidden] {
   display: none; }
 
+@-webkit-keyframes translate {
+  0% {
+    -webkit-transform: rotatez(0deg) scale(0.2);
+            transform: rotatez(0deg) scale(0.2); }
+  40% {
+    -webkit-transform: rotatez(20deg) scale(1);
+            transform: rotatez(20deg) scale(1); }
+  60% {
+    -webkit-transform: rotatez(0deg) scale(0.2);
+            transform: rotatez(0deg) scale(0.2); }
+  80% {
+    -webkit-transform: rotatez(-20deg) scale(1);
+            transform: rotatez(-20deg) scale(1); }
+  100% {
+    -webkit-transform: rotatez(0deg) scale(0.2);
+            transform: rotatez(0deg) scale(0.2); } }
+
+@keyframes translate {
+  0% {
+    -webkit-transform: rotatez(0deg) scale(0.2);
+            transform: rotatez(0deg) scale(0.2); }
+  40% {
+    -webkit-transform: rotatez(20deg) scale(1);
+            transform: rotatez(20deg) scale(1); }
+  60% {
+    -webkit-transform: rotatez(0deg) scale(0.2);
+            transform: rotatez(0deg) scale(0.2); }
+  80% {
+    -webkit-transform: rotatez(-20deg) scale(1);
+            transform: rotatez(-20deg) scale(1); }
+  100% {
+    -webkit-transform: rotatez(0deg) scale(0.2);
+            transform: rotatez(0deg) scale(0.2); } }
+
+.img-png {
+  -webkit-animation: translate 2s linear infinite normal both;
+          animation: translate 2s linear infinite normal both;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 50px; }
+
+@-webkit-keyframes left {
+  0% {
+    left: 0; }
+  80% {
+    left: 100%; }
+  100% {
+    left: 100%; } }
+
+@keyframes left {
+  0% {
+    left: 0; }
+  80% {
+    left: 100%; }
+  100% {
+    left: 100%; } }
+
+.paragraph-more {
+  color: #fff;
+  font-family: 'Source Code Pro', monospace;
+  left: 90px;
+  position: absolute;
+  top: 20px; }
+  .paragraph-more::before {
+    -webkit-animation: left steps(22) 3s infinite both;
+            animation: left steps(22) 3s infinite both;
+    background: #3767AD;
+    border-left: 5px black solid;
+    content: "";
+    height: 20px;
+    left: 0;
+    position: absolute;
+    width: 212px; }
+
+/* .paragraph-more::before {
+      background: $blue;
+      border-left: 5px black solid;
+      content: "";
+      height: 20px;
+      left: 100%;
+      position: absolute;
+      width: 212px;
+} */
 .wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -324,19 +408,16 @@ template {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  /*    .img__water-lot {
-        fill: #50f;
-    } */ }
+          transform: translate(-50%, -50%); }
   .wrapper .span-counter {
     color: #fff;
     font-size: 44px;
     position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%); }
-  .wrapper .button-add, .wrapper .button-remove {
+    top: 40%;
+    -webkit-transform: translateY(-40%);
+        -ms-transform: translateY(-40%);
+            transform: translateY(-40%); }
+  .wrapper .button-add, .wrapper .button-remove, .wrapper .button-clear {
     border: 0;
     border-radius: 5px;
     cursor: pointer;
@@ -354,7 +435,7 @@ template {
   .wrapper .button-add:hover {
     background-color: transparent;
     font-size: 20px; }
-  .wrapper .button-remove {
+  .wrapper .button-remove, .wrapper .button-clear {
     background-color: transparent;
     color: #fff;
     font-size: 14px;
@@ -363,7 +444,7 @@ template {
     -o-transition: font-size 0.3s 0.1s linear;
     transition: font-size 0.3s 0.1s linear;
     width: 184px; }
-  .wrapper .button-remove:hover {
+  .wrapper .button-remove:hover, .wrapper .button-clear:hover {
     font-size: 16px; }
 
 html {
