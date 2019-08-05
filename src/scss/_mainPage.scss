@@ -15,11 +15,11 @@
         color: #fff;
         font-size: 44px;
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 40%;
+        transform: translateY(-40%);
     }
 
-    .button-add, .button-remove {
+    .button-add, .button-remove, .button-clear {
       border: 0;
       border-radius: 5px;
       cursor: pointer;
@@ -40,7 +40,7 @@
         font-size: 20px;
     }
 
-    .button-remove {
+    .button-remove, .button-clear {
         background-color: transparent;
         color: #fff;
         font-size: 14px;
@@ -49,7 +49,7 @@
         width: 184px;
     }
 
-    .button-remove:hover {
+    .button-remove:hover, .button-clear:hover {
         font-size: 16px;
     }
 

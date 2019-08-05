@@ -18,6 +18,7 @@ if ('serviceWorker' in navigator) {
 
 const addBtn = document.querySelector('.button-add--js');
 const removeBtn = document.querySelector('.button-remove--js');
+const clearBtn = document.querySelector('.button-clear--js');
 const valueSpan = document.querySelector('.span-counter--js');
 const key = new Date ().toISOString().slice(0, 10);
 const waterColor = document.querySelector('.img__element--fill');
@@ -47,4 +48,9 @@ removeBtn.addEventListener('click', function () {
   }
   valueSpan.innerHTML--;
   localStorage.setItem(key, valueSpan.innerHTML);
+})
+
+clearBtn.addEventListener('click', function () {
+  valueSpan.innerHTML = 0;
+  localStorage.removeItem(key);
 })
