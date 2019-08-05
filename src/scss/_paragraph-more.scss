@@ -1,0 +1,43 @@
+
+@keyframes left {
+
+    0% {
+        left: 0;
+    }
+    80% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+
+}
+
+.paragraph-more {
+  color: #fff;
+  font-family: 'Source Code Pro', monospace;
+  left: 90px;
+  position: absolute;
+  top: 20px;
+  &::before {
+    animation: left steps(22) 3s infinite both;
+    background: $blue;
+    border-left: 5px black solid;
+    content: "";
+    height: 20px;
+    left: 0;
+    position: absolute;
+    width: 212px;
+  }
+}
+  
+/* .paragraph-more::before {
+      background: $blue;
+      border-left: 5px black solid;
+      content: "";
+      height: 20px;
+      left: 100%;
+      position: absolute;
+      width: 212px;
+} */
