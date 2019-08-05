@@ -1,0 +1,30 @@
+
+@keyframes translate {
+    0% {
+        transform: rotatez(0deg) scale(0.2);
+    }
+
+    40% {
+        transform: rotatez(20deg) scale(1);
+    }
+
+    60% {
+        transform: rotatez(0deg) scale(0.2);
+    }
+
+    80% {
+        transform: rotatez(-20deg) scale(1);
+    }
+
+    100% {
+        transform: rotatez(0deg) scale(0.2);
+    }
+}
+
+.img-png {
+    animation: translate 2s linear infinite normal both;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 50px;
+}
