@@ -16,78 +16,35 @@ if ('serviceWorker' in navigator) {
 
 // place your code below
 
-/* Pierwszy sposób na zapisanie localStorage */
-
-/* const key = new Date().toISOString().slice(0, 10);
 const addBtn = document.querySelector('.button-add--js');
 const removeBtn = document.querySelector('.button-remove--js');
-let counterSpan = document.querySelector('.span-counter--js'), count = 0;
-let counterContent = counterSpan.innerHTML = count;
-const svgWater = document.querySelector('.img__water--js');
+const valueSpan = document.querySelector('.span-counter--js');
+const key = new Date ().toISOString().slice(0, 10);
+const waterColor = document.querySelector('.img__element--fill');
 
-function colorChange (x) {
-  if (count >= 10) {
-    svgWater.style.fill = '#5500ff';
-  }
-  else {
-    svgWater.style.fill = '#2196F3';
-  }
-}
-
-addBtn.addEventListener('click', (x) => {
-  colorChange(x);
-  counterContent.innerHTML = count += 1;
-  localStorage.setItem(key, counterSpan.innerHTML);
-})
-
-removeBtn.addEventListener('click', (x) => {
-  colorChange(x);
-  if (count == 0) {
-    counterSpan.innerHTML = 0;
+function colorChanger (x) {
+  if (valueSpan.innerHTML > 5) {
+     x.style.fill = "#2E4272";
   } else {
-    counterSpan.innerHTML = count -- 1;
-  }
-  localStorage.setItem(key, counterSpan.innerHTML);
-})
-
-
-
-console.log(`Hello world!`); */
-
-
-/* Drugi sposób na zapisanie localStorage */
-
-const key = new Date().toISOString().slice(0, 10);
-const addBtn = document.querySelector('.button-add--js');
-const removeBtn = document.querySelector('.button-remove--js');
-const counterSpan = document.querySelector('.span-counter--js');
-let   counterValue = document.querySelector('.span-counter--js').innerHTML;
-const svgWater = document.querySelector('.img__water--js');
-const presentValue = parseInt(localStorage.getItem(key));
-
-function colorChange (x) {
-  if (counterValue >= 10) {
-    svgWater.style.fill = '#5500ff';
-  }
-  else {
-    svgWater.style.fill = '#2196F3';
+    x.style.fill = "#BBD7EA";
   }
 }
+
+if (localStorage[key] >= 0) {
+  valueSpan.innerHTML = localStorage.getItem(key);
+} 
+
+colorChanger(waterColor);
 
 addBtn.addEventListener('click', function () {
-  colorChange();
-  counterValue++;
-  document.querySelector('.span-counter--js').innerHTML = counterValue;
-  localStorage.setItem(key, counterValue);
+  valueSpan.innerHTML++;
+  localStorage.setItem(key, valueSpan.innerHTML);
 })
 
 removeBtn.addEventListener('click', function () {
-colorChange();
-if (counterValue > 0) {
-  counterValue--;
-  document.querySelector('.span-counter--js').innerHTML = counterValue;
-  localStorage.setItem(key, counterValue);
-} else {
-  countervalue = 0;
-}
-}) 
+  if (valueSpan.innerHTML < 1) {
+    valueSpan.innerHTML++;
+  }
+  valueSpan.innerHTML--;
+  localStorage.setItem(key, valueSpan.innerHTML);
+})
