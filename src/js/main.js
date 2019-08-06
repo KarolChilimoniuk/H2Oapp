@@ -22,6 +22,9 @@ const clearBtn = document.querySelector('.button-clear--js');
 const valueSpan = document.querySelector('.span-counter--js');
 const key = new Date ().toISOString().slice(0, 10);
 const waterColor = document.querySelector('.img__element--fill');
+const teachIcon = document.querySelector('.img-teacher--js');
+const previousIcon = document.querySelector('.img-previous--js');
+const infoSection = document.querySelector('.section-info--js');
 
 function colorChanger (x) {
   if (valueSpan.innerHTML > 5) {
@@ -53,4 +56,16 @@ removeBtn.addEventListener('click', function () {
 clearBtn.addEventListener('click', function () {
   valueSpan.innerHTML = 0;
   localStorage.removeItem(key);
+})
+
+teachIcon.addEventListener('click', function () {
+  infoSection.classList.toggle('section-info--left');
+  teachIcon.classList.toggle('img--display');
+  previousIcon.classList.toggle('img--display');
+})
+
+previousIcon.addEventListener('click', function () {
+  infoSection.classList.toggle('section-info--left');
+  teachIcon.classList.toggle('img--display');
+  previousIcon.classList.toggle('img--display');
 })
