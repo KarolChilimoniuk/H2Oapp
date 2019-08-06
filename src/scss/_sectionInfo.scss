@@ -1,0 +1,26 @@
+
+.section-info {
+  align-items: center;
+  background-color: $blue;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  left: -120%;
+  letter-spacing: 1px;
+  padding: 40px 20px 40px 20px;
+  position: absolute;
+  text-align: justify;
+  transition: left .5s linear;
+  width: 100%;
+  z-index: 2;
+
+  &__img {
+      width: 100px;
+  }
+
+  &--js {
+      left: 0;
+  }
+}

@@ -4,6 +4,7 @@
 @import "_teachIcon";
 @import "_paragraph-more";
 @import "_wrapper";
+@import "_sectionInfo";
 
 
 html {
@@ -18,4 +19,5 @@ html {
 body {
   color: $yellow;
   background: $blue;
+  height: 100vh;
 }

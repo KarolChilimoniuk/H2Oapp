@@ -21,10 +21,12 @@
     }
 }
 
-.img-png {
+.img-teacher {
     animation: translate 2s linear infinite normal both;
-    position: absolute;
+    cursor: pointer;
+    position: fixed;
     left: 20px;
     top: 20px;
     width: 50px;
+    z-index: 3;
 }
