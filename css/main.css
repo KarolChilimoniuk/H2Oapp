@@ -365,6 +365,14 @@ template {
 .img--display {
   display: none; }
 
+.img-list {
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  z-index: 3; }
+
 @-webkit-keyframes left {
   0% {
     left: 0; }
