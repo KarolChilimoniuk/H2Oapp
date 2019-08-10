@@ -26,6 +26,10 @@
       width: 216px;
     }
 
+    .button-add, .button-remove, .button-clear, .img-list {
+        margin-top: 30px;
+    }
+
     .button-add {
         box-shadow: 0 1px 5px 2px #000;
         transition: background-color 0.3s 0.1s linear, font-size 0.3s 0.1s linear;
@@ -47,6 +51,12 @@
 
     .button-remove:hover, .button-clear:hover {
         font-size: 16px;
+    }
+
+    .img-list {
+        bottom: 20px;
+        cursor: pointer;
+        width: 30px;
     }
 
 }
