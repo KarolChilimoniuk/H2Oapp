@@ -1,4 +1,4 @@
-![screenshot](https://github.com/KarolChilimoniuk/hydrapp/master/src/assets/img/O2APP.png)
+![screenshot](https://github.com/KarolChilimoniuk/hydrapp/blob/master/src/assets/img/O2APP.png)
 ***
 ### Introduction ⏩ 
 Water is a basic element of every life. Human's body contains mainly water (60%-70%). It is so important to drink sufficient amount of water and it is a basic reason why this app have been made. This project going to help you recognise how much water you drink. Remember - You have to drink at least 8 glasses of water per day if you want to hydrate you body correctly. Table of scores shows if you should change your habit or not. One activity you should do is adding glass of water in app after every glass of water you drunk in real life.
@@ -15,7 +15,7 @@ Water is a basic element of every life. Human's body contains mainly water (60%-
 ***
 ### How does it looks? 👀
 
-![screenshot](https://github.com/KarolChilimoniuk/hydrapp/master/src/assets/img/screenshot.png)
+![screenshot](https://github.com/KarolChilimoniuk/hydrapp/blob/master/src/assets/img/screenshot.png)
 ***
 ### How to launch the page? 🐱‍🏍
 
