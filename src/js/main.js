@@ -25,6 +25,9 @@ const waterColor = document.querySelector('.img__element--fill');
 const teachIcon = document.querySelector('.img-teacher--js');
 const previousIcon = document.querySelector('.img-previous--js');
 const infoSection = document.querySelector('.section-info--js');
+const tableBtn = document.querySelector('.img-table--js');
+const tablePrevBtn = document.querySelector('.img-score-previous--js');
+const scoreSection = document.querySelector('.section-score--js');
 
 function colorChanger (x) {
   if (valueSpan.innerHTML > 5) {
@@ -68,4 +71,16 @@ previousIcon.addEventListener('click', function () {
   infoSection.classList.toggle('section-info--left');
   teachIcon.classList.toggle('img--display');
   previousIcon.classList.toggle('img--display');
+})
+
+tableBtn.addEventListener('click', function () {
+  scoreSection.classList.toggle('section-score--left');
+  tableBtn.classList.toggle('img--display');
+  tablePrevBtn.classList.toggle('img--display');
+})
+
+tablePrevBtn.addEventListener('click', function () {
+  scoreSection.classList.toggle('section-score--left');
+  tableBtn.classList.toggle('img--display');
+  tablePrevBtn.classList.toggle('img--display');
 })
