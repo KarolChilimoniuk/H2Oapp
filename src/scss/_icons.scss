@@ -30,3 +30,17 @@
     width: 50px;
     z-index: 3;
 }
+
+.img-previous {
+    animation: translate 2s linear infinite normal both;
+    cursor: pointer;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    width: 50px;
+    z-index: 3;
+}
+
+.img--display {
+    display: none;
+}
