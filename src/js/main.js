@@ -28,6 +28,10 @@ const infoSection = document.querySelector('.section-info--js');
 const tableBtn = document.querySelector('.img-table--js');
 const tablePrevBtn = document.querySelector('.img-score-previous--js');
 const scoreSection = document.querySelector('.section-score--js');
+/* const dateRow = document.querySelector('.table__detail-date');
+const scoreRow = document.querySelector('.table__detail-score'); */
+
+// color changer for the water
 
 function colorChanger (x) {
   if (valueSpan.innerHTML > 5) {
@@ -37,11 +41,15 @@ function colorChanger (x) {
   }
 }
 
+colorChanger(waterColor);
+
+// getting items from Local Storage
+
 if (localStorage[key] >= 0) {
   valueSpan.innerHTML = localStorage.getItem(key);
 } 
 
-colorChanger(waterColor);
+// setting items in Local Storage
 
 addBtn.addEventListener('click', function () {
   valueSpan.innerHTML++;
@@ -56,10 +64,14 @@ removeBtn.addEventListener('click', function () {
   localStorage.setItem(key, valueSpan.innerHTML);
 })
 
+//removing data from local storage
+
 clearBtn.addEventListener('click', function () {
   valueSpan.innerHTML = 0;
   localStorage.removeItem(key);
 })
+
+//sections and images
 
 teachIcon.addEventListener('click', function () {
   infoSection.classList.toggle('section-info--left');
@@ -84,3 +96,27 @@ tablePrevBtn.addEventListener('click', function () {
   tableBtn.classList.toggle('img--display');
   tablePrevBtn.classList.toggle('img--display');
 })
+
+// scores in table
+
+function getScore () {
+
+  const tableRow = document.createElement('tr');
+  tableRow.classList.add('table__row');
+  const tableBody = document.querySelector('.table__body--js')
+  tableBody.appendChild(tableRow);
+
+  // date 
+  const dateRow = document.createElement('td')
+  dateRow.classList.add('table__detail-date');
+  tableRow.appendChild(dateRow);
+  dateRow.innerHtml = key.value;
+
+  //score
+  const scoreRow = document.createElement('td');
+  scoreRow.classList.add('table__detail-score');
+  tableRow.appendChild(scoreRow);
+  scoreRow.innerHTML = valueSpan.innerHTML;
+}
+
+getScore ();
