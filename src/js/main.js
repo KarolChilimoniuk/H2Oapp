@@ -28,8 +28,6 @@ const infoSection = document.querySelector('.section-info--js');
 const tableBtn = document.querySelector('.img-table--js');
 const tablePrevBtn = document.querySelector('.img-score-previous--js');
 const scoreSection = document.querySelector('.section-score--js');
-/* const dateRow = document.querySelector('.table__detail-date');
-const scoreRow = document.querySelector('.table__detail-score'); */
 
 // color changer for the water
 
