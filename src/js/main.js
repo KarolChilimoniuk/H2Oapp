@@ -95,17 +95,17 @@ tablePrevBtn.addEventListener('click', function () {
   tablePrevBtn.classList.toggle('img--display');
 })
 
-// scores in table
+// scores and dates in table
 
-for(let i = 0; i <= localStorage.length; i++) {
+for(let i = 0; i < localStorage.length; i++) {
 
   const dataScore = localStorage.getItem(key);
   const dataDate = localStorage.key(i);
-  let tableBody = document.querySelector('.table__body--js')
+  const tableBody = document.querySelector('.table__body--js')
 
   tableBody.innerHTML += `<tr class="table__row"><td class="table__detail-date"> ${dataDate}</td><td class="table__detail-score"> ${dataScore}</td>
   </tr>`;
-
+}
 
   /* function getScore() {
 
@@ -125,5 +125,5 @@ for(let i = 0; i <= localStorage.length; i++) {
   tableRow.appendChild(scoreElement);
   scoreElement.innerHTML = `${dataScore}`;   - rozwiązanie, które legło :D  */
 
- }
+
 
