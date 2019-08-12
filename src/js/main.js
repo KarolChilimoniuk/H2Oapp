@@ -123,7 +123,7 @@ for(let i = 0; i <= localStorage.length; i++) {
   const scoreElement = document.createElement('td');
   scoreElement.classList.add('table__detail-score');
   tableRow.appendChild(scoreElement);
-  scoreElement.innerHTML = `${dataScore}`;  */ - rozwiązanie, które legło :D 
-  
+  scoreElement.innerHTML = `${dataScore}`;   - rozwiązanie, które legło :D  */
+
  }
 
