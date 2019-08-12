@@ -2,16 +2,17 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    height: 55%;
     left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
  
     .span-counter {
-        color: #fff;
+        color: #000;
         font-size: 44px;
         position: absolute;
-        top: 40%;
+        top: 20%;
         transform: translateY(-40%);
     }
 

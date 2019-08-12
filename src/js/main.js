@@ -97,24 +97,33 @@ tablePrevBtn.addEventListener('click', function () {
 
 // scores in table
 
-function getScore () {
+for(let i = 0; i <= localStorage.length; i++) {
+
+  const dataScore = localStorage.getItem(key);
+  const dataDate = localStorage.key(i);
+  let tableBody = document.querySelector('.table__body--js')
+
+  tableBody.innerHTML += `<tr class="table__row"><td class="table__detail-date"> ${dataDate}</td><td class="table__detail-score"> ${dataScore}</td>
+  </tr>`;
+
+
+  /* function getScore() {
 
   const tableRow = document.createElement('tr');
   tableRow.classList.add('table__row');
-  const tableBody = document.querySelector('.table__body--js')
   tableBody.appendChild(tableRow);
 
   // date 
-  const dateRow = document.createElement('td')
-  dateRow.classList.add('table__detail-date');
-  tableRow.appendChild(dateRow);
-  dateRow.innerHtml = key.value;
+  const dateElement = document.createElement('td')
+  dateElement.classList.add('table__detail-date');
+  tableRow.appendChild(dateElement);
+  dateElement.innerHtml = `${dataDate}`;
 
   //score
-  const scoreRow = document.createElement('td');
-  scoreRow.classList.add('table__detail-score');
-  tableRow.appendChild(scoreRow);
-  scoreRow.innerHTML = valueSpan.innerHTML;
-}
+  const scoreElement = document.createElement('td');
+  scoreElement.classList.add('table__detail-score');
+  tableRow.appendChild(scoreElement);
+  scoreElement.innerHTML = `${dataScore}`;  */ - rozwiązanie, które legło :D 
+  
+ }
 
-getScore ();

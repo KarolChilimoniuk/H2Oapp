@@ -1,12 +1,12 @@
 {
   "name": "Karol Chilimoniuk Hydrapp",
-  "short_name": "KCH Hydrapp",
+  "short_name": "O2app",
   "theme_color": "#000000",
   "background_color": "#000000",
   "display": "standalone",
   "orientation": "portrait",
-  "scope": "/hydrapp/",
-  "start_url": "/hydrapp/",
+  "scope": "/O2app/",
+  "start_url": "/O2app/",
   "icons": [
     {
       "src": "assets/pwa/icons/icon-72x72.png",
