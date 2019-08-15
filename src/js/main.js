@@ -69,8 +69,7 @@ removeBtn.addEventListener('click', function () {
 //removing data from local storage
 
 clearBtn.addEventListener('click', function () {
-  valueSpan.innerHTML = 0;
-  localStorage.removeItem(key);
+  localStorage.clear();
 })
 
 //sections and images
