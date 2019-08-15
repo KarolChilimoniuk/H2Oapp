@@ -5,7 +5,7 @@
     color: #fff;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
     left: -120%;
     letter-spacing: 1px;
@@ -24,9 +24,10 @@
       }
     }
     .img-score-previous {
-      cursor: pointer;
-      position: absolute;
       bottom: 20%;
+      cursor: pointer;
+      right: 10%;
+      position: absolute;
       width: 40px;
     }
 }

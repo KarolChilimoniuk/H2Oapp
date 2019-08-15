@@ -2,17 +2,22 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: 55%;
+    height: 70%;
+    justify-content: center;
     left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
+
+    .img-svg {
+        min-height: 212px;
+    }
  
     .span-counter {
         color: #000;
-        font-size: 44px;
+        font-size: 40px;
         position: absolute;
-        top: 20%;
+        top: 35%;
         transform: translateY(-40%);
     }
 
@@ -58,6 +63,12 @@
         bottom: 20px;
         cursor: pointer;
         width: 30px;
+    }
+
+    @media screen and (orientation: landscape) {
+        height: 70%;
+        margin: 70px 0 60px 0;
+        padding-top: 40px;
     }
 }
 
