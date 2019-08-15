@@ -47,6 +47,10 @@ if (localStorage[key] >= 0) {
   valueSpan.innerHTML = localStorage.getItem(key);
 } 
 
+if (valueSpan.innerHTML >= 0) {
+  localStorage.setItem(key, valueSpan.innerHTML);
+}
+
 // setting items in Local Storage
 
 addBtn.addEventListener('click', function () {
@@ -99,13 +103,17 @@ tablePrevBtn.addEventListener('click', function () {
 
 for(let i = 0; i < localStorage.length; i++) {
 
-  const dataScore = localStorage.getItem(key);
   const dataDate = localStorage.key(i);
+  const dataScore = localStorage.getItem(dataDate);
   const tableBody = document.querySelector('.table__body--js')
 
   tableBody.innerHTML += `<tr class="table__row"><td class="table__detail-date"> ${dataDate}</td><td class="table__detail-score"> ${dataScore}</td>
   </tr>`;
+
+  console.log(dataDate);
+  console.log(dataScore);
 }
+
 
   /* function getScore() {
 
