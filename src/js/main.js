@@ -91,12 +91,18 @@ tableBtn.addEventListener('click', function () {
   scoreSection.classList.toggle('section-score--left');
   tableBtn.classList.toggle('img--display');
   tablePrevBtn.classList.toggle('img--display');
+  addBtn.classList.toggle('.button--hidden');
+  removeBtn.classList.toggle('.button--hidden');
+  clearBtn.classList.toggle('.button--hidden');
 })
 
 tablePrevBtn.addEventListener('click', function () {
   scoreSection.classList.toggle('section-score--left');
   tableBtn.classList.toggle('img--display');
   tablePrevBtn.classList.toggle('img--display');
+  addBtn.classList.toggle('.button--hidden');
+  removeBtn.classList.toggle('.button--hidden');
+  clearBtn.classList.toggle('.button--hidden');
 })
 
 // scores and dates in table
