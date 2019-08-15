@@ -418,18 +418,23 @@ template {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 55%;
+  height: 70%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   left: 50%;
   position: absolute;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
+  .wrapper .img-svg {
+    min-height: 212px; }
   .wrapper .span-counter {
     color: #000;
-    font-size: 44px;
+    font-size: 40px;
     position: absolute;
-    top: 20%;
+    top: 35%;
     -webkit-transform: translateY(-40%);
         -ms-transform: translateY(-40%);
             transform: translateY(-40%); }
@@ -468,6 +473,11 @@ template {
     bottom: 20px;
     cursor: pointer;
     width: 30px; }
+  @media screen and (orientation: landscape) {
+    .wrapper {
+      height: 70%;
+      margin: 70px 0 60px 0;
+      padding-top: 40px; } }
 
 .section-info {
   -webkit-box-align: center;
@@ -518,7 +528,7 @@ template {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -539,9 +549,10 @@ template {
       padding: 10px;
       width: 120px; }
   .section-score .img-score-previous {
-    cursor: pointer;
-    position: absolute;
     bottom: 20%;
+    cursor: pointer;
+    right: 10%;
+    position: absolute;
     width: 40px; }
 
 .section-score--left {
