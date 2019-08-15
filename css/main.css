@@ -473,6 +473,8 @@ template {
     bottom: 20px;
     cursor: pointer;
     width: 30px; }
+  .wrapper .button--hidden {
+    display: none; }
   @media screen and (orientation: landscape) {
     .wrapper {
       height: 70%;
