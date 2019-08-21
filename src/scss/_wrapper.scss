@@ -1,78 +1,85 @@
 .wrapper {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 70%;
-    justify-content: center;
-    left: 50%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  justify-content: center;
+  left: 50%;
+  margin-top: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  .img-svg {
+    min-height: 212px;
+  }
+
+  .span-counter {
+    color: #000;
+    font-size: 40px;
     position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 35%;
+    transform: translateY(-40%);
+  }
 
-    .img-svg {
-        min-height: 212px;
-    }
- 
-    .span-counter {
-        color: #000;
-        font-size: 40px;
-        position: absolute;
-        top: 35%;
-        transform: translateY(-40%);
-    }
+  .button-add,
+  .button-remove,
+  .button-clear {
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    height: 47px;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    width: 216px;
+  }
 
-    .button-add, .button-remove, .button-clear {
-      border: 0;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 18px;
-      height: 47px;
-      letter-spacing: 2px;
-      margin-top: 30px;
-      width: 216px;
-    }
+  .button-add,
+  .button-remove,
+  .button-clear,
+  .img-table {
+    margin-top: 30px;
+  }
 
-    .button-add, .button-remove, .button-clear, .img-table {
-        margin-top: 30px;
-    }
+  .button-add {
+    box-shadow: 0 1px 5px 2px #000;
+    transition: background-color 0.3s 0.1s linear, font-size 0.3s 0.1s linear;
+  }
 
-    .button-add {
-        box-shadow: 0 1px 5px 2px #000;
-        transition: background-color 0.3s 0.1s linear, font-size 0.3s 0.1s linear;
-    }
+  .button-add:hover {
+    background-color: transparent;
+    font-size: 20px;
+  }
 
-    .button-add:hover {
-        background-color: transparent;
-        font-size: 20px;
-    }
+  .button-remove,
+  .button-clear {
+    background-color: transparent;
+    color: #fff;
+    font-size: 14px;
+    height: 23px;
+    transition: font-size 0.3s 0.1s linear;
+    width: 184px;
+  }
 
-    .button-remove, .button-clear {
-        background-color: transparent;
-        color: #fff;
-        font-size: 14px;
-        height: 23px;
-        transition: font-size 0.3s 0.1s linear;
-        width: 184px;
-    }
+  .button-remove:hover,
+  .button-clear:hover {
+    font-size: 16px;
+  }
 
-    .button-remove:hover, .button-clear:hover {
-        font-size: 16px;
-    }
+  .img-table {
+    bottom: 20px;
+    cursor: pointer;
+    width: 30px;
+  }
 
-    .img-table {
-        bottom: 20px;
-        cursor: pointer;
-        width: 30px;
-    }
+  .button--hidden {
+    display: none;
+  }
 
-    .button--hidden {
-        display: none;
-    }
-
-    @media screen and (orientation: landscape) {
-        height: 70%;
-        margin: 70px 0 60px 0;
-        padding-top: 40px;
-    }
+  @media screen and (orientation: landscape) {
+    height: 70%;
+    margin: 100px 0 60px 0;
+    padding-top: 40px;
+  }
 }
-
