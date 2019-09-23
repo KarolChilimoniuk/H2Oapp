@@ -1,6 +1,3 @@
-# O2App
-It is O2App. It's going to help you drink more water.
-***
 ![screenshot](https://github.com/KarolChilimoniuk/hydrapp/blob/master/src/assets/img/O2APP.png)
 ***
 ### Introduction ⏩ 💦
