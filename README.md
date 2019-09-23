@@ -1,7 +1,6 @@
 # O2App
 It is O2App. It's going to help you drink more water.
 ***
-My course-homepage where I use every technologies I have learnt. It's about Mountains!
 ![screenshot](https://github.com/KarolChilimoniuk/hydrapp/blob/master/src/assets/img/O2APP.png)
 ***
 ### Introduction ⏩ 💦
