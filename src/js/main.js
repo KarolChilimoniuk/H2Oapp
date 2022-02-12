@@ -14,7 +14,7 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-// place your code below
+// app code
 
 const addBtn = document.querySelector('.button-add--js');
 const removeBtn = document.querySelector('.button-remove--js');
@@ -29,114 +29,99 @@ const tableBtn = document.querySelector('.img-table--js');
 const tablePrevBtn = document.querySelector('.img-score-previous--js');
 const scoreSection = document.querySelector('.section-score--js');
 
-// color changer for the water
+class o2app {
+  constructor() {
+    this.waterResult = 0;
+  }
 
-function colorChanger (x) {
-  if (valueSpan.innerHTML > 5) {
-     x.style.fill = "#2E4272";
-  } else {
-    x.style.fill = "#BBD7EA";
+  setValue(resultEl) {
+    localStorage[key] !== undefined? this.waterResult = localStorage.getItem(key) : 0;
+    resultEl.textContent = this.waterResult;
+  }
+
+  colorChanger(resultEl) {
+    if (resultEl.textContent > 5) {
+      resultEl.style.fill = "#2E4272";
+    } else {
+      resultEl.style.fill = "#BBD7EA";
+    }
+  }
+
+  setResultTable() {
+    for(let i = 0; i < localStorage.length; i++) {
+      const dataDate = localStorage.key(i);
+      const dataScore = localStorage.getItem(dataDate);
+      const tableBody = document.querySelector('.table__body--js')
+    
+      tableBody.innerHTML += `<tr class="table__row"><td class="table__detail-date">${dataDate}</td><td class="table__detail-score">${dataScore}</td>
+      </tr>`;
+    }
+  }
+
+  stylesHandler() {
+
+    teachIcon.addEventListener('click', function () {
+      infoSection.classList.toggle('section-info--left');
+      teachIcon.classList.toggle('img--display');
+      previousIcon.classList.toggle('img--display');
+    });
+    
+    previousIcon.addEventListener('click', function () {
+      infoSection.classList.toggle('section-info--left');
+      teachIcon.classList.toggle('img--display');
+      previousIcon.classList.toggle('img--display');
+    });
+    
+    tableBtn.addEventListener('click', function () {
+      scoreSection.classList.toggle('section-score--left');
+      tableBtn.classList.toggle('img--display');
+      tablePrevBtn.classList.toggle('img--display');
+      addBtn.classList.toggle('.button--hidden');
+      removeBtn.classList.toggle('.button--hidden');
+      clearBtn.classList.toggle('.button--hidden');
+    });
+    
+    tablePrevBtn.addEventListener('click', function () {
+      scoreSection.classList.toggle('section-score--left');
+      tableBtn.classList.toggle('img--display');
+      tablePrevBtn.classList.toggle('img--display');
+      addBtn.classList.toggle('.button--hidden');
+      removeBtn.classList.toggle('.button--hidden');
+      clearBtn.classList.toggle('.button--hidden');
+    });
+  }
+
+  startApp(resultEl) {  
+    this.setValue(resultEl);
+    this.setResultTable();
+    this.colorChanger(resultEl);
+    this.stylesHandler();
+    
+    let currentValue = this.waterResult;
+
+    addBtn.addEventListener('click', () => {
+      currentValue++;
+      resultEl.textContent = currentValue;
+      localStorage.setItem(key, resultEl.textContent);
+    });
+
+    removeBtn.addEventListener('click', () => {
+      if (resultEl.textContent < 1) {
+        currentValue++;
+      }
+      currentValue--;
+      resultEl.textContent = currentValue;
+      localStorage.setItem(key, resultEl.textContent);
+    });
+
+    clearBtn.addEventListener('click', () => {
+      currentValue = 0;
+      resultEl.textContent = currentValue;
+      localStorage.clear();
+    });
   }
 }
 
-colorChanger(waterColor);
+const app = new o2app();
 
-// getting items from Local Storage
-
-if (localStorage[key] >= 0) {
-  valueSpan.innerHTML = localStorage.getItem(key);
-} 
-
-if (valueSpan.innerHTML >= 0) {
-  localStorage.setItem(key, valueSpan.innerHTML);
-}
-
-// setting items in Local Storage
-
-addBtn.addEventListener('click', function () {
-  valueSpan.innerHTML++;
-  localStorage.setItem(key, valueSpan.innerHTML);
-})
-
-removeBtn.addEventListener('click', function () {
-  if (valueSpan.innerHTML < 1) {
-    valueSpan.innerHTML++;
-  }
-  valueSpan.innerHTML--;
-  localStorage.setItem(key, valueSpan.innerHTML);
-})
-
-//removing data from local storage
-
-clearBtn.addEventListener('click', function () {
-  localStorage.clear();
-})
-
-//sections and images
-
-teachIcon.addEventListener('click', function () {
-  infoSection.classList.toggle('section-info--left');
-  teachIcon.classList.toggle('img--display');
-  previousIcon.classList.toggle('img--display');
-})
-
-previousIcon.addEventListener('click', function () {
-  infoSection.classList.toggle('section-info--left');
-  teachIcon.classList.toggle('img--display');
-  previousIcon.classList.toggle('img--display');
-})
-
-tableBtn.addEventListener('click', function () {
-  scoreSection.classList.toggle('section-score--left');
-  tableBtn.classList.toggle('img--display');
-  tablePrevBtn.classList.toggle('img--display');
-  addBtn.classList.toggle('.button--hidden');
-  removeBtn.classList.toggle('.button--hidden');
-  clearBtn.classList.toggle('.button--hidden');
-})
-
-tablePrevBtn.addEventListener('click', function () {
-  scoreSection.classList.toggle('section-score--left');
-  tableBtn.classList.toggle('img--display');
-  tablePrevBtn.classList.toggle('img--display');
-  addBtn.classList.toggle('.button--hidden');
-  removeBtn.classList.toggle('.button--hidden');
-  clearBtn.classList.toggle('.button--hidden');
-})
-
-// scores and dates in table
-
-for(let i = 0; i < localStorage.length; i++) {
-
-  const dataDate = localStorage.key(i);
-  const dataScore = localStorage.getItem(dataDate);
-  const tableBody = document.querySelector('.table__body--js')
-
-  tableBody.innerHTML += `<tr class="table__row"><td class="table__detail-date"> ${dataDate}</td><td class="table__detail-score"> ${dataScore}</td>
-  </tr>`;
-
-  console.log(dataDate);
-  console.log(dataScore);
-}
-
-
-  /* function getScore() {
-
-  const tableRow = document.createElement('tr');
-  tableRow.classList.add('table__row');
-  tableBody.appendChild(tableRow);
-
-  // date 
-  const dateElement = document.createElement('td')
-  dateElement.classList.add('table__detail-date');
-  tableRow.appendChild(dateElement);
-  dateElement.innerHtml = `${dataDate}`;
-
-  //score
-  const scoreElement = document.createElement('td');
-  scoreElement.classList.add('table__detail-score');
-  tableRow.appendChild(scoreElement);
-  scoreElement.innerHTML = `${dataScore}`;   - rozwiązanie, które legło :D  */
-
-
-
+app.startApp(valueSpan);
