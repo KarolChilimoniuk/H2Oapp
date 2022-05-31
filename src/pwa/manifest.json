@@ -1,12 +1,12 @@
 {
-  "name": "Karol Chilimoniuk O2app",
-  "short_name": "O2app",
+  "name": "Karol Chilimoniuk H2Oapp",
+  "short_name": "H2Oapp",
   "theme_color": "#000000",
   "background_color": "#000000",
   "display": "standalone",
   "orientation": "portrait",
-  "scope": "/O2app/",
-  "start_url": "/O2app/",
+  "scope": "/H2Oapp/",
+  "start_url": "/H2Oapp/",
   "icons": [
     {
       "src": "assets/pwa/icons/icon-72x72.png",
